@@ -13,7 +13,6 @@ class Factory
   $this->ServiceName = $ServiceName;
   $this->GetParams = $Parameters;
   $this->MethodName = $MethodName;
-  //var_dump($Parameters);
  }
 
  public function CallService()
@@ -24,8 +23,7 @@ class Factory
         if(is_callable("Factory::".$method))
          return Factory::$method();
     }
-    /*if(class_exists($ClassName))
-    	return new $ClassName($Url,$Parameters, self::$ServiceName);*/
+
    return null;
  }
 
@@ -136,17 +134,10 @@ class Factory
 
   function GetResponse()
  {
-   //var_dump($this->RequestParams);
-   //echo $this->ServiceName;
    $client = new SoapClient($this->ServiceUrl);
    $response = $client->__call($this->ServiceName ,$this->RequestParams);
    return $response;
  }
-
-
+ 
 }
-
-//$f  = new Factory();
-//$f->CallMethod("Base", "http://gisdesa.mardelplata.gob.ar/opendata/ws.php?wsdl", array('token' => $token),"areas_programaticas");
-
 ?>

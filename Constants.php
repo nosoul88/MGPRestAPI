@@ -1,5 +1,6 @@
 <?php
 $SERVICE_URL = "http://gisdesa.mardelplata.gob.ar/opendata/ws.php?wsdl";
+$TOKEN = "wwfe345gQ3ed5T67g4Dase45F6fer";
 $SERVICE_NAMES = array
 (
     'AreasProgramaticas' => "areas_programaticas",
@@ -12,7 +13,7 @@ $SERVICE_NAMES = array
     'EducacionPublicaMunicipal' => "educacion_publica_municipal",
     'EducacionPublicaProvincial' => "educacion_publica_provincial",
     'InformacionTuristica' => "informacion_turistica",
-    'LineasColectivo' => "lineas",
+    'LineasColectivos' => "lineas",
     'Museos' => "museos",
     'PuntosCargaTarjetasColectivo' => "puntos_carga_tarjetas",
     'ServiciosSociales' => "servicios_sociales",
@@ -44,7 +45,7 @@ $BASE_SERVICES_TYPES = array
     'EducacionPublicaMunicipal' => "Base",
     'EducacionPublicaProvincial' => "Base",
     'InformacionTuristica' => "Base",
-    'LineasColectivo' => "Base",
+    'LineasColectivos' => "Base",
     'Museos' => "Base",
     'PuntosCargaTarjetasColectivo' => "Base",
     'ServiciosSociales' => "Base",

@@ -1,0 +1,12 @@
+php_flag magic_quotes_gpc off 
+RewriteEngine on
+Options -Indexes 
+Rewriterule ^MGPData/toREST/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)$ /soapQA/toRest.php?token=$1&serviceName=$2&param1=$3&param2=$4&param3=$5&param4=$6 [QSA]
+Rewriterule ^MGPData/toREST/(.*)/(.*)/(.*)/(.*)$ /soapQA/toRest.php?token=$1&serviceName=$2&param1=$3&param2=$4 [QSA]
+Rewriterule ^MGPData/toREST/(.*)/(.*)/(.*)$ /soapQA/toRest.php?token=$1&serviceName=$2&param1=$3 [QSA]
+Rewriterule ^MGPData/toREST/(.*)/(.*)$ /soapQA/toRest.php?token=$1&serviceName=$2 [QSA]
+
+
+
+
+
